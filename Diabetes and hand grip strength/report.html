@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="XXX" />
+
+<meta name="date" content="2023-09-27" />
+
+<title>Epidemiology</title>
+
+<script src="report_files/header-attrs-2.23/header-attrs.js"></script>
+<script src="report_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="report_files/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="report_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="report_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="report_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="report_files/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="report_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="report_files/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="report_files/navigation-1.1/tabsets.js"></script>
+<link href="report_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="report_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Epidemiology</h1>
+<h4 class="author">XXX</h4>
+<h4 class="date">2023-09-27</h4>
+
+</div>
+
+
+<div id="question-1" class="section level1">
+<h1>Question 1</h1>
+<div id="exploratory-data-analysis" class="section level2">
+<h2>Exploratory Data Analysis</h2>
+<div id="a" class="section level3">
+<h3>1A</h3>
+<div id="number-summary-of-body-mass-index-bmi-kgm2-including-the-mean"
+class="section level4">
+<h4>5-number summary of Body Mass Index (BMI kg/m2) including the
+mean</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Statistic</th>
+<th align="right">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Minimum</td>
+<td align="right">16.97531</td>
+</tr>
+<tr class="even">
+<td align="left">1st Quartile</td>
+<td align="right">20.06953</td>
+</tr>
+<tr class="odd">
+<td align="left">Median</td>
+<td align="right">21.91381</td>
+</tr>
+<tr class="even">
+<td align="left">Mean</td>
+<td align="right">21.87393</td>
+</tr>
+<tr class="odd">
+<td align="left">3rd Quartile</td>
+<td align="right">23.15556</td>
+</tr>
+<tr class="even">
+<td align="left">Maximum</td>
+<td align="right">28.72679</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Commentary:</strong> Our data is fairly symmetric with the
+median and mean very close together indicating that there are not many
+extreme values in our sample. The maximum BMI in our sample is 28.7
+(kg/m2) which mean we do not have any student who is obese in our sample
+(BMI greater than or equal to 30)</p>
+</div>
+<div id="figure-1---histogram-of-bmi" class="section level4">
+<h4>Figure 1 - Histogram of BMI</h4>
+<p><img src="report_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><u><strong>Commentary:</strong></u> The histogram supports the
+observation I noted above that there are not many extreme values in our
+sample and we have only one outlying student whose BMI is close to
+30.</p>
+</div>
+<div id="figure-2---count-of-each-bmi-category-for-our-sample"
+class="section level4">
+<h4>Figure 2 - Count of each BMI category for our sample</h4>
+<p><img src="report_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><u><strong>Commentary:</strong></u> Most students in our sample (76)
+have a normal BMI and four (4) of them are underweight with the
+remaining seven (7) being classified as overweight. As I mentioned
+earlier, no student in our sample is obese.</p>
+</div>
+<div
+id="figure-3---correlation-matrix-between-pairs-of-variables-in-our-dataset"
+class="section level4">
+<h4>Figure 3 - Correlation matrix between pairs of variables in our
+dataset</h4>
+<p><img src="report_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><u><strong>Commentary:</strong></u> Some of the variables in our
+dataset (predictors of grip strength) are <strong>moderately</strong>
+correlated with each other. Weight and BMI are <strong>strongly</strong>
+correlated with a correlation score of 0.74. Forearm circumference and
+bicep circumference are also highly correlated (0.85). The implication
+of this is that to avoid the problem of multicollinearity in the linear
+regression model I aim to develop in the next section, I will only
+select one of the other of those variables that are highly correlated
+with each other.</p>
+</div>
+</div>
+<div id="regression-model" class="section level3">
+<h3>Regression model</h3>
+<div id="variable-selection" class="section level4">
+<h4>Variable selection</h4>
+<p>I used the correlation matrix shown above to make a selection of
+variables to include in the initial regression model based on the
+strength of relationship between the independent variables and the
+outcome variable (grip strength). The variables selected are:</p>
+<ol style="list-style-type: decimal">
+<li>Forearm circumference (mm) with a correlation of 0.62</li>
+<li>Hand length (cm) with a correlation of 0.28</li>
+<li>Hand width (cm) with a correlation of 0.23</li>
+<li>Forearm skinfold (mm) with a correlation of 0.15</li>
+</ol>
+<p>I have excluded other variables due to either low correlation with
+the outcome variable or a medium-high correlation with variables already
+selected. For example, Bicep circumference has 0.85 with forecarm
+circumference and has been excluded to avoid multicollinearity. I
+decided the order for which to enter the variables in the model based on
+the strength of correlation.</p>
+</div>
+<div id="table-1---initial-regression-model" class="section level4">
+<h4>Table 1 - Initial Regression Model</h4>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="center">Coefficient</th>
+<th align="center">Std.Error</th>
+<th align="center">t-Statistic</th>
+<th align="center">Prob.</th>
+<th align="center">Significance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Intercept</strong></td>
+<td align="center">-58.92</td>
+<td align="center">15.09</td>
+<td align="center">-3.90</td>
+<td align="center">0.00</td>
+<td align="center">*</td>
+</tr>
+<tr class="even">
+<td align="left">Forearm circumference</td>
+<td align="center">2.74</td>
+<td align="center">0.39</td>
+<td align="center">7.03</td>
+<td align="center">0.00</td>
+<td align="center">*</td>
+</tr>
+<tr class="odd">
+<td align="left">Hand length</td>
+<td align="center">1.39</td>
+<td align="center">0.65</td>
+<td align="center">2.11</td>
+<td align="center">0.04</td>
+<td align="center">*</td>
+</tr>
+<tr class="even">
+<td align="left">Hand width</td>
+<td align="center">0.56</td>
+<td align="center">0.40</td>
+<td align="center">1.37</td>
+<td align="center">0.17</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Weight</td>
+<td align="center">0.01</td>
+<td align="center">0.08</td>
+<td align="center">0.11</td>
+<td align="center">0.91</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>R-squared</strong></td>
+<td align="center">0.4465</td>
+<td align="center"><strong>F-statistic</strong></td>
+<td align="center">16.54</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Adjusted R-squared</strong></td>
+<td align="center">0.4195</td>
+<td align="center"><strong>P-value</strong></td>
+<td align="center">0.00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p>Considering that weight and hand width seem to not make any
+substantial contribution to our model in the presence of the other
+variables we included, we can drop them to get a more parsimonious
+model.</p>
+</div>
+<div id="table-2---final-regression-model" class="section level4">
+<h4>Table 2 - Final Regression Model</h4>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="center">Coefficient</th>
+<th align="center">Std.Error</th>
+<th align="center">t-Statistic</th>
+<th align="center">Prob.</th>
+<th align="center">95% confidence interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Intercept</strong></td>
+<td align="center">-57.74</td>
+<td align="center">15.09</td>
+<td align="center">-3.90</td>
+<td align="center">0.000208</td>
+<td align="center">[-87.40, -28.13]</td>
+</tr>
+<tr class="even">
+<td align="left">Forearm circumference</td>
+<td align="center">2.79</td>
+<td align="center">0.39</td>
+<td align="center">7.03</td>
+<td align="center">0.00000000019</td>
+<td align="center">[2.03, 3.56]</td>
+</tr>
+<tr class="odd">
+<td align="left">Hand length</td>
+<td align="center">1.60</td>
+<td align="center">0.65</td>
+<td align="center">2.11</td>
+<td align="center">0.011880</td>
+<td align="center">[0.36, 2.83]</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>R-squared</strong></td>
+<td align="center">0.4323</td>
+<td align="center"><strong>F-statistic</strong></td>
+<td align="center">31.98</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Adjusted R-squared</strong></td>
+<td align="center">0.4188</td>
+<td align="center"><strong>P-value</strong></td>
+<td align="center">0.00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="b---interpreting-the-model-results" class="section level3">
+<h3>1B - INTERPRETING THE MODEL RESULTS</h3>
+<p>Our model is defined as:</p>
+<p><span class="math display">\[
+gripstrength_i = -57.74 + (2.79 forearmcircumference_i) + (1.60hand
+length_i) - (1.1)
+\]</span></p>
+<p>Both coefficients are positive and statistically significant at 0.05
+confidence level which implies that higher forearm circumference yields
+a higher grip strength and a longer hand results in a high grip
+strength.</p>
+<ul>
+<li><p><strong>Forearm circumference</strong> (b = 2.79): This value
+indicates that if the effect of hand length is held constant, a
+<strong>1mm</strong> increase in forearm circumference will yield a
+<strong>2.79kg</strong> extra grip strength. The true value of this
+coefficient in the population is likely to be between 2.03kg and 3.56kg
+at 95% <strong>confidence level</strong>.</p></li>
+<li><p><strong>Hand length</strong> (b = 1.60): This indicates that a
+<strong>1cm</strong> increase in hand length will yield
+<strong>1.60kg</strong> extra grip strength. This is true if the effect
+of forearm circumference is held constant. The true value of this
+coefficient in the population is likely to be between 0.36cm and 2.84cm
+at 95% <strong>confidence level</strong>.</p></li>
+</ul>
+<p>We can use the equation 1.1 above to predict the grip strength of any
+male student at Glasgow University <strong>(our population)</strong> if
+we have measurements of their forearm circumference and hand length by
+plugging the values respectively into the equation.</p>
+<p>For example - if we consider Emeka with forearm circumference of
+<strong>40.5cm</strong> and hand length of <strong>32.8cm</strong>. His
+grip strength would = <span class="math inline">\(-57.74 + (2.79*40.5) +
+(1.60*32.8) = 107.74kg\)</span></p>
+</div>
+<div id="c---assumptions-of-the-model" class="section level3">
+<h3>1C - ASSUMPTIONS OF THE MODEL</h3>
+<p>Some key assumptions of the linear regression model include:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Multicollinearity</strong>: The multiple regression method
+assumes no strong correlation between the independent variables because
+this would impact our ability to interpret the model coefficients
+correctly. I have used a statistic called Variance Inflation Factor
+(VIF) to assess multicollinearity in the model. The minimum value of a
+VIF is 1 and it has no maximum. VIF values are assigned for every
+predictor in the model. Values less than 10 are not a cause for concern
+(Andy. F, 2012).</li>
+</ol>
+<p>We can see below that our VIF values are very close to 1 and we can
+therefore conclude that our model is not suffering from
+multicollinearity and that this assumption is satisfied.</p>
+<pre><code>##    Fcirc     Hlen 
+## 1.011986 1.011986</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><p><strong>Linearity and homoscedasticity:</strong> Linear
+regression assumes that the error is constant along the value of the
+dependent variable. We can see that both assumptions are met with the
+plot of fitted values versus residuals below. We can observe how the
+points are evenly dispersed around zero and that there is no non-linear
+pattern. <strong>See plot C below.</strong></p></li>
+<li><p><strong>Normality of residuals</strong>: The Q-Q plot and
+histogram below does not show significant deviation of the observed
+residuals from normality. <strong>See plots A and B
+below.</strong></p></li>
+</ol>
+<p>Given that these assumptions are met, we can safely conclude that the
+model appears to be accurate for our sample and generalizable to the
+population. Forearm circumference and hand length are important in
+predicting grip strength.</p>
+<div
+id="figure-3---plots-of-model-output-grip-strength-forearmcircumference-handlength-error"
+class="section level4">
+<h4>Figure 3 - Plots of model output (Grip Strength =
+ForearmCircumference + HandLength + Error)</h4>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="report_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+</div>
+<div id="question-2" class="section level1">
+<h1>Question 2</h1>
+<div id="a---exploratory-data-analysis" class="section level2">
+<h2>2A - Exploratory Data Analysis</h2>
+<div id="summary-statistics" class="section level3">
+<h3>Summary statistics</h3>
+<pre><code>##        id             age             bmi         chd            chol      
+##  Min.   : 2001   Min.   :39.00   Min.   :11.19   No :2897   Min.   :103.0  
+##  1st Qu.: 3741   1st Qu.:42.00   1st Qu.:22.96   Yes: 257   1st Qu.:197.2  
+##  Median :11406   Median :45.00   Median :24.39              Median :223.0  
+##  Mean   :10478   Mean   :46.28   Mean   :24.52              Mean   :226.4  
+##  3rd Qu.:13115   3rd Qu.:50.00   3rd Qu.:25.84              3rd Qu.:253.0  
+##  Max.   :22101   Max.   :59.00   Max.   :38.95              Max.   :645.0  
+##                                                             NA&#39;s   :12     
+##       dbp           diabetes        ncigs           sbp        smoke     
+##  Min.   : 58.00   Type A:1589   Min.   : 0.0   Min.   : 98.0   No :1652  
+##  1st Qu.: 76.00   Type B:1565   1st Qu.: 0.0   1st Qu.:120.0   Yes:1502  
+##  Median : 80.00                 Median : 0.0   Median :126.0             
+##  Mean   : 82.02                 Mean   :11.6   Mean   :128.6             
+##  3rd Qu.: 86.00                 3rd Qu.:20.0   3rd Qu.:136.0             
+##  Max.   :150.00                 Max.   :99.0   Max.   :230.0             
+##                                                                          
+##      Sex      
+##  Female:1617  
+##  Male  :1537  
+##               
+##               
+##               
+##               
+## </code></pre>
+</div>
+<div id="age-and-diabetes" class="section level3">
+<h3>Age and Diabetes</h3>
+<p><img src="report_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><u><strong>Commentary</strong></u>: As seen in the boxplots above,
+the median age for patients with Type A diabetes is higher compared to
+patients with Type B diabetes.</p>
+</div>
+<div id="bmi-and-diabetes" class="section level3">
+<h3>BMI and Diabetes</h3>
+<p><img src="report_files/figure-html/unnamed-chunk-12-1.png" width="672" /><img src="report_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+<p><u><strong>Commentary</strong></u>: As seen in the boxplots and
+density plot above, both diabetes groups are not much different with
+regard to BMI. For example we can see an almost complete overlap of the
+density plot for both groups.</p>
+</div>
+<div id="systolic-blood-pressure-and-diabetes" class="section level3">
+<h3>Systolic blood pressure and Diabetes</h3>
+<p><img src="report_files/figure-html/unnamed-chunk-13-1.png" width="672" /><img src="report_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<p><u><strong>Commentary:</strong></u> As we can observe in both
+boxplots and density plots above, Type A patients have a slightly higher
+average (median) SBP compared to Type B patients</p>
+</div>
+</div>
+<div id="b---logistic-regression-models-for-male-and-female-patients"
+class="section level2">
+<h2>2B - Logistic regression models for male and female patients</h2>
+<div id="for-male-patients" class="section level3">
+<h3>For male patients</h3>
+<div
+id="table-1.-logistic-regression-model-result-for-predicting-diabetes-type-in-male-patients"
+class="section level4">
+<h4>Table 1. Logistic regression model result for predicting diabetes
+type in male patients</h4>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th>Coefficient</th>
+<th>Std. Error</th>
+<th>Odds Ratio</th>
+<th>Confidence Interval</th>
+<th>p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td>2.406</td>
+<td>0.591</td>
+<td>-</td>
+<td></td>
+<td>0.000047</td>
+</tr>
+<tr class="even">
+<td><strong>Age (years)</strong></td>
+<td>-0.027</td>
+<td>0.010</td>
+<td>0.974</td>
+<td>(0.955, 0.992)</td>
+<td>0.005972</td>
+</tr>
+<tr class="odd">
+<td><strong>Patient has coronary heart disease (Yes)</strong></td>
+<td>-0.700</td>
+<td>0.204</td>
+<td>0.497</td>
+<td>(0.329, 0.736)</td>
+<td>0.000638</td>
+</tr>
+<tr class="even">
+<td><strong>Number of cigarettes smoked per day</strong></td>
+<td>-0.012</td>
+<td>0.004</td>
+<td>0.988</td>
+<td>(0.981, 0.994)</td>
+<td>0.000543</td>
+</tr>
+<tr class="odd">
+<td><strong>Systolic blood pressure (mmHg)</strong></td>
+<td>-0.007</td>
+<td>0.004</td>
+<td>0.992</td>
+<td>(0.985, 0.998)</td>
+<td>0.025469</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="interpretation-for-male-patients-model" class="section level4">
+<h4><u>Interpretation for male patients model</u></h4>
+<p>The table shown above is the result for the most parsimonious model I
+obtained from the data <strong>for male patients</strong>, the initial
+model included patient cholesterol level and BMI which were dropped due
+to non-significant p-values. The interpretation of the model
+coefficients are as follows with their corresponding confidence
+interval. Our reference category for the outcome variable
+<strong>(diabetes type)</strong> is Type A diabetes.</p>
+<p><strong>Age (years):</strong> For every one-year increase in age, the
+odds of having Type B diabetes, relative to Type A diabetes, decreased
+by approximately 2.6% (Odds Ratio = 0.974, 95% Confidence Interval:
+0.955 to 0.992).</p>
+<p><strong>Patient has coronary heart disease (Yes):</strong> Male
+patients with coronary heart disease had approximately 50.3% lower odds
+of having Type B diabetes, compared to Type A diabetes (Odds Ratio =
+0.497, 95% Confidence Interval: 0.329 to 0.736).</p>
+<p><strong>Number of cigarettes smoked per day:</strong> With each
+additional cigarette smoked per day, the odds of having Type B diabetes,
+relative to Type A diabetes, decreased by approximately 1.2% (Odds Ratio
+= 0.988, 95% Confidence Interval: 0.981 to 0.994).</p>
+<p><strong>Systolic blood pressure:</strong> For every one-unit increase
+in systolic blood pressure, the odds of having Type B diabetes, compared
+to Type A diabetes, decreased by approximately 0.8% (Odds Ratio = 0.992,
+95% Confidence Interval: 0.985 to 0.998).</p>
+</div>
+</div>
+<div id="for-female-patients" class="section level3">
+<h3>For female patients</h3>
+<div
+id="table-2---logistic-regression-result-for-predicting-diabetes-type-in-female-patients"
+class="section level4">
+<h4>Table 2 - Logistic regression result for predicting diabetes type in
+female patients</h4>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Predictor</th>
+<th>Coefficient</th>
+<th>Std. Error</th>
+<th>Odds Ratio</th>
+<th>Confidence Interval</th>
+<th>p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(Intercept)</td>
+<td>1.454</td>
+<td>0.426</td>
+<td>-</td>
+<td></td>
+<td>0.0006</td>
+</tr>
+<tr class="even">
+<td><strong>Age</strong></td>
+<td>-0.027</td>
+<td>0.010</td>
+<td>0.973</td>
+<td>(0.956, 0.991)</td>
+<td>0.0030</td>
+</tr>
+<tr class="odd">
+<td><strong>Patient has coronary heart disease</strong></td>
+<td>-0.723</td>
+<td>0.199</td>
+<td>0.485</td>
+<td>(0.326, 0.713)</td>
+<td>0.0003</td>
+</tr>
+<tr class="even">
+<td><strong>Number of cigarettes smoked per day</strong></td>
+<td>-0.011</td>
+<td>0.004</td>
+<td>0.989</td>
+<td>(0.982, 0.996)</td>
+<td>0.0024</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="interpretation-for-female-patients-model"
+class="section level4">
+<h4><u>Interpretation for female patients model</u></h4>
+<p>The table shown above is the result for the most parsimonious model I
+obtained from the data <strong>for female patients</strong>, the initial
+model included whether or not the patient had coronary heart disease
+which was dropped due to non-significance. The interpretation of the
+model coefficients are as follows with their corresponding confidence
+interval. Our reference category for the outcome variable
+<strong>(diabetes type)</strong> is Type A diabetes.</p>
+<p><strong>Age:</strong> For each one-year increase in age, the odds of
+having Type B diabetes, compared to Type A diabetes, decreased by
+approximately 2.7% (Odds Ratio = 0.973, 95% Confidence Interval: 0.956
+to 0.991).</p>
+<p><strong>Patient has coronary heart disease:</strong> Male patients
+with coronary heart disease exhibited approximately 51.5% lower odds of
+having Type B diabetes compared to Type A diabetes (Odds Ratio = 0.485,
+95% Confidence Interval: 0.326 to 0.713).</p>
+<p><strong>Number of cigarettes smoked per day:</strong> With each
+additional cigarette smoked per day, the odds of having Type B diabetes,
+relative to Type A diabetes, decreased by approximately 1.1% (Odds Ratio
+= 0.989, 95% Confidence Interval: 0.982 to 0.996).</p>
+</div>
+</div>
+</div>
+<div id="c---assessment-of-model-fit" class="section level2">
+<h2>2C - Assessment of model fit</h2>
+<p>Below I use the Receiver Operating Characteristic curve (ROC) to
+assess how well my model fit the data. The ROC curve and its Area Under
+the Curve (AOC) value help us evaluate the model’s performance. The AUC
+is a number between 0 and 1. If the AUC is 0.5, it means the model is
+just guessing randomly. A value close to 1 is a model that fits the data
+well. If the AUC is less than 0.5 (but greater than 0), it means the
+model is doing worse than random guessing.</p>
+<div id="fit-of-model-for-predicting-diabetes-types-male-patients"
+class="section level3">
+<h3>Fit of model for predicting diabetes types (MALE PATIENTS)</h3>
+<pre><code>## Setting levels: control = Type A, case = Type B</code></pre>
+<pre><code>## Setting direction: controls &lt; cases</code></pre>
+<pre><code>## Area under the curve: 0.5951</code></pre>
+<p>For the model for predicting diabetes type in male patients that I
+developed in the previous section, the AUC is 0.5951 which suggests that
+the model has some ability to discriminate between the diabetes type,
+but its performance is moderate. While it performs better than random
+guessing, there is room for improvement to achieve stronger predictive
+power - perhaps through collection of more patient attribute data and
+finding significant predictors of diabetes type.</p>
+</div>
+<div id="fit-of-model-for-predicting-diabetes-types-female-patients"
+class="section level3">
+<h3>Fit of model for predicting diabetes types (FEMALE PATIENTS)</h3>
+<pre><code>## Setting levels: control = Type A, case = Type B</code></pre>
+<pre><code>## Setting direction: controls &lt; cases</code></pre>
+<pre><code>## Area under the curve: 0.58</code></pre>
+<p>For the model for predicting diabetes type in female patients that I
+developed in the previous section, the AUC is 0.58 which suggests that
+the model has some ability to discriminate between the diabetes type,
+but its performance is moderate. While it performs better than random
+guessing, there is room for improvement to achieve stronger predictive
+power - perhaps through collection of more patient attribute data and
+finding significant predictors of diabetes type.</p>
+</div>
+</div>
+</div>
+<div id="appendix" class="section level1">
+<h1>Appendix</h1>
+<div id="initial-model-for-predicting-diabetes-type-in-male-patients"
+class="section level2">
+<h2>Initial model for predicting diabetes type in male patients</h2>
+<table style="border-collapse:collapse; border:none;">
+<tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">
+ 
+</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">
+diabetes
+</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">
+Predictors
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+Odds Ratios
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+CI
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+p
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+(Intercept)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+15.67
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+3.67 – 67.88
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>&lt;0.001</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+chol
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.00
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+1.00 – 1.00
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.848
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+age
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.97
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.95 – 0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>0.005</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+ncigs
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.98 – 0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>0.001</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+sbp
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.99 – 1.00
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>0.046</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+bmi
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.95 – 1.03
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.563
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+chd [Yes]
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.51
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.33 – 0.75
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>0.001</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">
+Observations
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">
+1529
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">
+R<sup>2</sup> Tjur
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">
+0.031
+</td>
+</tr>
+</table>
+</div>
+<div id="initial-model-for-predicting-diabetes-type-in-female-patients"
+class="section level2">
+<h2>Initial model for predicting diabetes type in female patients</h2>
+<table style="border-collapse:collapse; border:none;">
+<tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">
+ 
+</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">
+diabetes
+</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">
+Predictors
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+Odds Ratios
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+CI
+</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">
+p
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+(Intercept)
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+8.25
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+2.71 – 25.39
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>&lt;0.001</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+age
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.98
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.96 – 0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>0.007</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+chd [Yes]
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.50
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.33 – 0.73
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>&lt;0.001</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+ncigs
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.98 – 1.00
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+<strong>0.002</strong>
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">
+sbp
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.99
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.99 – 1.00
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">
+0.082
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">
+Observations
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">
+1617
+</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">
+R<sup>2</sup> Tjur
+</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">
+0.025
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="methodology" class="section level1">
+<h1>Methodology</h1>
+<ol style="list-style-type: decimal">
+<li>I used density plots and stacked bar charts to visualize which
+variables are likely to be useful predictors of patient diabetes type
+for each gender type. Thereafter I entered the selected variables into
+the regression model (6 for males), varied their position in the model
+to see if any changes are observed regarding the significance of the
+predictor or its coefficient. After this, I removed the non-significant
+predictors from the model at 5% level of significance to establish a
+parsimonious model.</li>
+<li>I used systolic blood pressure and dropped diastolic blood pressure
+as they are both highly correlated (r = 0.77) to avoid
+multicollinearity.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
